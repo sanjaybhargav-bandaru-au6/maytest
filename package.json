@@ -1,0 +1,29 @@
+{
+  "name": "may_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "npm nodemon server"
+  },
+  "keywords": [],
+  "author": "Sanjay",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.13",
+    "mongoose-paginate": "^5.0.3",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.3",
+    "uuid": "^8.0.0"
+  },
+  "description": ""
+}

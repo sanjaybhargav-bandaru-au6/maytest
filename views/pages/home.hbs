@@ -1,0 +1,93 @@
+{{!-- {{>header}} --}}
+
+
+<div class=" mt-2 container">
+    {{#if name}}<h2>Most Top IT companies in India</h2>{{/if}}
+    {{#each name}}
+    {{!-- <h2>{{name}}</h2> --}}
+    <div class="row mt-2">
+        {{#each this}}
+        <div class="col-md-4 col-sm-6 mt-2">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="/comp_details/{{this._id}}" class="card-link">Details</a>
+            
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+    
+</div>
+<div class="container">
+    {{#if ename}}
+
+    <table class="table table-striped">
+        <h2>Employee data Dashboard</h2>
+        <h3 class="text-right">Total:{{ename.total}}</h3>
+        <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">email</th>
+      <th scope="col">number</th>
+      <th scope="col">join_Date</th>
+      <th scope="col">Resign_Dat</th>
+      <th scope="col">Previous_comp_name</th>
+      <th scope="col">current_Date</th>
+    </tr>
+  </thead>
+  {{#each ename}}
+  {{#each this}}
+  <tbody>
+    <tr>
+      <th scope="row">*</th>
+      <td>{{this.e_name}}</td>
+      <td>{{this.e_email}}</td>
+      <td>{{this.e_number}}</td>
+      
+    <td> 
+    {{#each this.e_comp_details}}
+      {{#each this}}
+        {{this.join_date}}
+     {{/each}}
+      {{/each}}
+      </td>
+    <td> 
+    {{#each this.e_comp_details}}
+      {{#each this}}
+         {{this.resign_date}}
+     {{/each}}
+      {{/each}}
+      </td>
+    <td> 
+    {{#each this.e_comp_details}}
+      {{#each this}}
+        {{this.prev_comp}}
+     {{/each}}
+      {{/each}}
+      </td>
+    <td> 
+    {{#each this.e_comp_details}}
+      {{#each this}}
+        {{this.current_date}}
+     {{/each}}
+      {{/each}}
+      </td>
+    </tr>
+       
+        
+        
+      
+     
+    </tbody>
+    {{/each}}
+    {{/each}}
+    </table>
+            
+    {{/if}}
+</div>
